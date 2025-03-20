@@ -12,6 +12,10 @@
 		C6AAF3022D8C2BA50003EFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AAF3012D8C2BA50003EFE8 /* Assets.xcassets */; };
 		C6AAF3052D8C2BA50003EFE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6AAF3042D8C2BA50003EFE8 /* Preview Assets.xcassets */; };
 		C6AAF30C2D8C3B7E0003EFE8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AAF30B2D8C3B7E0003EFE8 /* GoogleService-Info.plist */; };
+		C6AAF3102D8C5E2E0003EFE8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C6AAF30F2D8C5E2E0003EFE8 /* FirebaseAuth */; };
+		C6AAF3122D8C5E2E0003EFE8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C6AAF3112D8C5E2E0003EFE8 /* FirebaseDatabase */; };
+		C6AAF3142D8C5E2E0003EFE8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C6AAF3132D8C5E2E0003EFE8 /* FirebaseFirestore */; };
+		C6AAF3162D8C5E2E0003EFE8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C6AAF3152D8C5E2E0003EFE8 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6AAF3122D8C5E2E0003EFE8 /* FirebaseDatabase in Frameworks */,
+				C6AAF3162D8C5E2E0003EFE8 /* FirebaseStorage in Frameworks */,
+				C6AAF3102D8C5E2E0003EFE8 /* FirebaseAuth in Frameworks */,
+				C6AAF3142D8C5E2E0003EFE8 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +94,12 @@
 			dependencies = (
 			);
 			name = "Firebase+SwiftUI examples";
+			packageProductDependencies = (
+				C6AAF30F2D8C5E2E0003EFE8 /* FirebaseAuth */,
+				C6AAF3112D8C5E2E0003EFE8 /* FirebaseDatabase */,
+				C6AAF3132D8C5E2E0003EFE8 /* FirebaseFirestore */,
+				C6AAF3152D8C5E2E0003EFE8 /* FirebaseStorage */,
+			);
 			productName = "Firebase+SwiftUI examples";
 			productReference = C6AAF2FA2D8C2BA30003EFE8 /* Firebase+SwiftUI examples.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +128,9 @@
 				Base,
 			);
 			mainGroup = C6AAF2F12D8C2BA30003EFE8;
+			packageReferences = (
+				C6AAF30E2D8C5E2E0003EFE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C6AAF2FB2D8C2BA30003EFE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,6 +365,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6AAF30E2D8C5E2E0003EFE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6AAF30F2D8C5E2E0003EFE8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6AAF30E2D8C5E2E0003EFE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C6AAF3112D8C5E2E0003EFE8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6AAF30E2D8C5E2E0003EFE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		C6AAF3132D8C5E2E0003EFE8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6AAF30E2D8C5E2E0003EFE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C6AAF3152D8C5E2E0003EFE8 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6AAF30E2D8C5E2E0003EFE8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6AAF2F22D8C2BA30003EFE8 /* Project object */;
 }
